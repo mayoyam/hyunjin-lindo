@@ -1,10 +1,10 @@
 /* style.css */
 
 body {
-    font-family: 'Segoe Script', cursive, sans-serif; /* Exemplo de uma fonte diferente */
+    font-family: 'Segoe Script', cursive, sans-serif; /* Uma fonte com um toque de escrita à mão */
     margin: 20px;
-    background-color: #c2e8fd;
-    color: #245876;
+    background-color: #c2e8fd; /* Cor de fundo azul clara */
+    color: #245876; /* Cor para as letras/fonte */
 }
 
 header {
