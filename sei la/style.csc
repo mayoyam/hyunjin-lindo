@@ -1,10 +1,10 @@
 /* style.css */
 
 body {
-    font-family: sans-serif; /* Uma fonte padrão para começar */
-    margin: 20px; /* Adiciona um espaço nas bordas da página */
-    background-color: #c2e8fd; /* Cor de fundo azul clara que você escolheu */
-    color: #245876; /* Cor para as letras/fonte que você escolheu */
+    font-family: 'Segoe Script', cursive, sans-serif; /* Exemplo de uma fonte diferente */
+    margin: 20px;
+    background-color: #c2e8fd;
+    color: #245876;
 }
 
 header {
@@ -14,6 +14,15 @@ header {
     text-align: center;
     border-radius: 8px; /* Deixa as bordas do cabeçalho um pouco arredondadas */
     margin-bottom: 20px; /* Adiciona um espaço abaixo do cabeçalho */
+}
+
+header h1 {
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.1em;
 }
 
 nav ul {
@@ -32,11 +41,15 @@ nav ul li a {
     text-decoration: none; /* Remove o sublinhado padrão dos links */
     color: #245876; /* Usa a cor que você escolheu para os links */
     font-weight: bold; /* Deixa os links em negrito */
+    padding: 8px 12px; /* Adiciona um pouco de espaço ao redor dos links */
+    border-radius: 5px; /* Arredonda as bordas dos links */
+    background-color: #e0f4fc; /* Um fundo claro para os links */
 }
 
 nav ul li a:hover {
     color: #1a3d52; /* Um tom mais escuro para o link quando o mouse passa por cima */
-    text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
+    background-color: #c2e8fd; /* Cor de fundo do body ao passar o mouse */
+    text-decoration: none; /* Remove o sublinhado ao passar o mouse (se quiser) */
 }
 
 section {
@@ -45,6 +58,7 @@ section {
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Uma sombra bem suave */
+    border: 1px solid #a7d9ed; /* Adiciona uma borda leve */
 }
 
 section h2 {
@@ -55,12 +69,22 @@ section h2 {
 }
 
 section ul {
-    list-style-type: disc; /* Adiciona os marcadores de lista padrão */
-    padding-left: 20px;
+    list-style-type: none; /* Remove os marcadores de lista padrão */
+    padding-left: 20px; /* Adiciona um espaço à esquerda para alinhar o texto */
 }
 
 section ul li {
     margin-bottom: 8px;
+    position: relative; /* Necessário para posicionar pseudo-elementos */
+    padding-left: 25px; /* Espaço para o emoji */
+}
+
+section ul li::before {
+    content: "📌"; /* Um emoji de tachinha como marcador */
+    position: absolute;
+    left: 0;
+    top: 2px; /* Ajusta a posição vertical do emoji */
+    color: #245876; /* Cor do emoji */
 }
 
 section ul li strong {
